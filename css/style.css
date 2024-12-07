@@ -1,0 +1,76 @@
+.itemBook {
+    display: flex;
+    flex-direction: column;
+}
+
+.complete-Button {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 5px 10px;
+    border: 2px solid #5F30E2;
+    color: black;
+    font-size: 10px;
+    margin-top: auto;
+    align-self: center;
+    cursor: pointer;
+}
+
+.complete-Button:hover {
+    background: #5F30E2;
+    color: white;
+}
+
+.delete-Button {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 5px 10px;
+    border: 2px solid #5F30E2;
+    color: black;
+    font-size: 10px;
+    margin-top: auto;
+    align-self: center;
+    cursor: pointer;
+}
+
+.delete-Button:hover {
+    background: #5F30E2;
+    color: white;
+}
+
+.edit-Button {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 5px 10px;
+    border: 2px solid #5F30E2;
+    color: black;
+    font-size: 10px;
+    margin-top: auto;
+    align-self: center;
+    cursor: pointer;
+}
+
+.edit-Button:hover {
+    background: #5F30E2;
+    color: white;
+}
+
+.undo-button {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 5px 10px;
+    border: 2px solid #5F30E2;
+    color: black;
+    font-size: 10px;
+    margin-top: auto;
+    align-self: center;
+    cursor: pointer;
+}
+
+.undo-button:hover {
+    background: #5F30E2;
+    color: white;
+}

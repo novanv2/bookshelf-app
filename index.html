@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              header: '#5F30E2',
+              wrapper: '#F8F9FA',
+              input: '#F5F1FF',
+              bor: '#9475EA',
+            },
+            fontFamily: {
+              body: ['Raleway'],
+            },
+            width: {
+              kotak: '500px',
+            },
+            height: {
+              hcus: '35rem',
+            },
+            boxShadow: {
+              w1: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="font-body max-w-full m-0 p-0 box-border">
+    <header class="bg-header p-5 text-white text-center">
+      <h1 class="font-semibold text-4xl">Novan Bookshelf App</h1>
+    </header>
+
+    <main class="max-w-full flex flex-wrap justify-between items-start m-4 gap-12">
+      <section class="w-kotak rounded-lg m-4 bg-wrapper p-4 h-hcus shadow-w1">
+          <h2 class="text-4xl text-center font-semibold">Tambah Buku Baru</h2>
+        <form id="bookForm" class="flex p-4 flex-col h-80 rounded-2xl gap-4">
+          <div class="flex flex-col">
+            <label class="mb-1 text-2xl font-light" for="bookFormTitle">Judul</label>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-4 box-border mb-2 text-2xl" id="bookFormTitle" type="text" required/>
+          </div>
+          <div class="flex flex-col">
+            <label class="mb-1 text-2xl font-light" for="bookFormAuthor">Penulis</label>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-4 box-border mb-2 text-2xl" id="bookFormAuthor" type="text" required/>
+          </div>
+          <div class="flex flex-col">
+            <label class="mb-1 text-2xl font-light" for="bookFormYear">Tahun</label>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-4 box-border mb-2 text-2xl" id="bookFormYear" type="number" required/>
+          </div>
+          <div>
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input
+              id="bookFormIsComplete"
+              type="checkbox"
+            />
+          </div>
+          <input type="hidden" id="bookId"/>
+          <button id="bookFormSubmit" type="submit" class="w-fit font-body rounded-2xl py-3 px-6 border-2 border-solid border-header text-black text-2xl mt-auto self-center cursor-pointer hover:bg-header hover:text-white">
+            Masukkan Buku
+          </button>
+        </form>
+      </section>
+
+      <div class="flex justify-center items-center flex-col w-7/12 mt-2 gap-8">
+        <section class="bg-wrapper shadow-w1 h-fit w-full">
+          <h2 class="text-2xl font-semibold">Cari Buku</h2>
+          <form id="searchBook" class="mb-4">
+            <label class="text-2xl" for="searchBookTitle">Judul</label>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg w-5/6 p-2 box-border text-2xl" id="searchBookTitle" type="text"/>
+            <button class="w-fit font-body rounded-2xl py-1 px-2 border-2 border-solid border-header text-black text-2xl mt-auto self-center cursor-pointer hover:bg-header hover:text-white" id="searchSubmit" type="submit">
+              Cari
+            </button>
+          </form>
+        </section>
+        
+        <div class="flex justify-center gap-40 p-5 w-full shadow-w1">
+          <section class="rounded-lg bg-wrapper h-fit p-8 flex flex-col gap-4 border-2 border-solid border-bor">
+            <h2 class="text-2xl text-center">Belum selesai dibaca</h2>
+            <div id="incompleteBookList"></div>
+          </section>
+    
+          <section class="rounded-lg bg-wrapper h-fit p-8 flex flex-col gap-4 border-2 border-solid border-bor">
+            <h2 class="text-2xl text-center">Selesai dibaca</h2>
+            <div id="completeBookList"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
