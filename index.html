@@ -48,30 +48,30 @@
     </header>
 
     <main class="flex flex-wrap justify-between items-start gap-4 md:gap-0">
-      <section class="w-4/5 rounded-lg m-auto mt-6 bg-wrapper p-4 h-hcus shadow-w1 md:ml-4 md:p-2 md:w-2/6 md:h-fit">
+      <section class="w-4/5 rounded-lg m-auto mt-6 bg-wrapper p-4 h-hcus shadow-w1 md:ml-4 xl:ml-6 md:p-2 xl:p-4 md:w-2/6 xl:w-1/3 md:h-fit">
           <h2 class="text-2xl text-center font-semibold">Tambah Buku Baru</h2>
         <form id="bookForm" class="flex p-2 flex-col rounded-2xl gap-2">
           <div class="flex flex-col">
             <label class="mb-1 text-xl font-light" for="bookFormTitle">Judul</label>
-            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-1 box-border text-xl" id="bookFormTitle" type="text" required/>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-1 box-border text-xl xl:text-2xl xl:p-2" id="bookFormTitle" type="text" required/>
           </div>
           <div class="flex flex-col">
             <label class="mb-1 text-xl font-light" for="bookFormAuthor">Penulis</label>
-            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-1 box-border text-xl" id="bookFormAuthor" type="text" required/>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-1 box-border text-xl xl:text-2xl xl:p-2" id="bookFormAuthor" type="text" required/>
           </div>
           <div class="flex flex-col">
             <label class="mb-1 text-xl font-light" for="bookFormYear">Tahun</label>
-            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-1 box-border text-xl" id="bookFormYear" type="number" required/>
+            <input class="font-body bg-input border-2 border-solid border-bor rounded-lg p-1 box-border text-xl xl:text-2xl xl:p-2" id="bookFormYear" type="number" required/>
           </div>
           <div>
-            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <label class="text-lg font-light" for="bookFormIsComplete">Selesai dibaca</label>
             <input
               id="bookFormIsComplete"
               type="checkbox"
             />
           </div>
           <input type="hidden" id="bookId"/>
-          <button id="bookFormSubmit" type="submit" class="w-fit font-body rounded-2xl py-3 px-6 md:py-2 md:px-4 border-2 border-solid border-header text-black text-xl mt-auto self-center cursor-pointer hover:bg-header hover:text-white">
+          <button id="bookFormSubmit" type="submit" class="w-fit font-body rounded-2xl py-3 px-6 md:py-2 xl:py-3 md:px-4 xl:px-6 border-2 border-solid border-header text-black text-xl mt-auto self-center cursor-pointer hover:bg-header hover:text-white">
             Masukkan Buku
           </button>
         </form>
@@ -89,7 +89,7 @@
           </form>
         </section>
         
-        <div class="flex justify-center gap-3 p-5 w-full shadow-w1">
+        <div class="flex justify-center gap-3 p-5 w-full shadow-w1 xl:gap-20">
           <section class="rounded-lg bg-wrapper h-fit p-8 md:p-2 flex flex-col gap-4 border-2 border-solid border-bor">
             <h2 class="text-2xl md:text-xl text-center font-semibold">Belum selesai dibaca</h2>
             <div id="incompleteBookList"></div>
